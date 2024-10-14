@@ -1,0 +1,23 @@
+1.	Python program that calculates the total number of vowels and the count of each individual vowel (A, E, I, O, U) in the given string "Guvi Geeks Network Private Limited
+
+def count_vowels(s):
+#Convert the String to Upper case 
+    s = s.upper()
+#Define Vowels
+    vowel_counts = {'A': 0, 'E': 0, 'I': 0, 'O': 0, 'U': 0}
+    for char in s:
+        if char in vowel_counts:
+            vowel_counts[char] += 1
+    
+    total_vowels = sum(vowel_counts.values())
+    
+    return total_vowels, vowel_counts
+#Define the String
+input_string = "Guvi Geeks Network Private Limited"
+
+total_vowels, vowel_counts = count_vowels(input_string)
+
+print(f"Total number of vowels: {total_vowels}")
+print("Count of each vowel:")
+for vowel, count in vowel_counts.items():
+    print(f"{vowel}: {count}")
